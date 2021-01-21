@@ -8,3 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tienda';
 }
+
+
+/**
+ * Todavia no funciona la dependencia concurrently...creo que es necesario crear una API
+ * primero...Xd investigar c-17-11-20 sino sirve desinstalar
+ * ver minuto 12
+ * 
+ */
