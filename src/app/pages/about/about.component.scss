@@ -28,14 +28,27 @@
 }
 */
 .card-about{
+    
     background: #ffffff;
     color: #000000;
     height: 100%;
+   
 }
 .center{
+    margin:50px auto;
     justify-content: center;
     
 }
 .card--subtitle{
     margin-left: -15px;
 }
+.card--img{
+    border-radius: 50%; 
+    
+    max-width: 100%;
+    height: auto;   
+}
+
+/*
+* un poco mal los estilos pero de a poco se va a corregir c-08-02-21
+*/

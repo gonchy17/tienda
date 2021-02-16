@@ -41,6 +41,9 @@ export class HomeComponent implements OnInit {
 /*
 * min 12 video 4 c-15-01-21 y seguir trabajando cuando se pueda, no solo se
 debe programar, tambien se debe investigar
-*Copiar una url de una imagen para probar, a lo mejor se arregla,
-seguir trabajando 
+
+*crear el proyecto en github c-20-01-21
+* Se resolvera para lo ultimo el diseño mobile, tablet y des ser necesario pc, por
+ahora concentrarse en la logica
+* tambien investigar si se usara firebase u otro c-24-01-21
 */ 
