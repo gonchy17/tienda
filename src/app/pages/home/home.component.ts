@@ -1,8 +1,9 @@
 
+
 import { Component, OnInit } from '@angular/core';
 
 import { DishI } from './../../shared/models/dish.interface';
-
+import { DishService } from './dish/dish.service';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,12 @@ import { DishI } from './../../shared/models/dish.interface';
 })
 export class HomeComponent implements OnInit {
 
+  public dish:{
+    id:string;
+    titleDish:string;
+    contentDish:string;
+    imageDish:string;
+  }
   /*public dish:{
     id:string;
     titleDish:string;
@@ -31,9 +38,10 @@ export class HomeComponent implements OnInit {
     }
   ];
   */
-  constructor() { }
+  constructor(private dishSvc: DishService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dishSvc.getAllDish().subscribe(res=> console.log('DISH', res));
   }
 
 }
@@ -45,5 +53,7 @@ debe programar, tambien se debe investigar
 *crear el proyecto en github c-20-01-21
 * Se resolvera para lo ultimo el diseño mobile, tablet y des ser necesario pc, por
 ahora concentrarse en la logica
-* tambien investigar si se usara firebase u otro c-24-01-21
+* ahora probar e investigar el error del id que esta comentado en el service c-22-02-21
+Por ahora no se puede hacer correr, si no se pudiera nuevamente, entonces ver el video de dominicode
+c-24-02-21
 */ 

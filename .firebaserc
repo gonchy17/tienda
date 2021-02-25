@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tienda-ea6ff": {
+      "hosting": {
+        "tienda": [
+          "tienda-ea6ff"
+        ]
+      }
+    }
+  }
+}
