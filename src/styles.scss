@@ -7,8 +7,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text--center{
     text-align: center;
 }
-.img--hover{
-    
+.img--hover{    
         cursor: pointer;
     
+}
+
+.container-spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }

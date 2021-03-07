@@ -1,4 +1,3 @@
-import { AboutComponent } from './pages/about/about.component';
 
 import { NgModule } from '@angular/core';
 
@@ -10,10 +9,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
-
+import {
+    MatProgressSpinnerModule
+} from '@angular/material/progress-spinner';
+import{MatDividerModule} from '@angular/material/divider';
 
 const myModules = [MatToolbarModule, MatSidenavModule,MatButtonModule,MatMenuModule,
-    MatListModule, MatIconModule, MatCardModule];
+    MatListModule, MatIconModule, MatCardModule, MatProgressSpinnerModule,MatDividerModule];
 
 @NgModule({
     imports: [...myModules],    

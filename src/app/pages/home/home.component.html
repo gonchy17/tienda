@@ -1,21 +1,41 @@
 <p>home works!</p>
-<!--div class="container"-->
+<div class="container" *ngIf="dish$ | async as dish; else loading">
+<!--{{  dish$ | async | json}}-->
+
 <article class="card__dish text--center">
-    <mat-card class="post-card" >
+    <mat-card class="post-card" *ngFor="let dish of dish$ | async">
         <mat-card-header>
             <mat-card-title >
-                <a class="a__title" [routerLink]="'/'">Dish</a>
+                <a class="a__title" [routerLink]="['/dish', dish.id]">
+                    {{dish.titleDish}}
+                </a>
             </mat-card-title>
         </mat-card-header>
-        <!--img matCardImage [src]=""/-->
-        <img class ="img__home img--hover" alt="image dish" src="../../../assets/img/restaurant.png"/>
+        <img matCardImage [src]="dish.imageDish" class ="img__home img--hover"/>
+        <!--img class ="img__home img--hover" alt="image dish" 
+            src="../../../assets/img/restaurant.png"/-->
         <mat-card-content >
             <p>
-                desc:
+               {{dish.contentDish}}
             </p>
         </mat-card-content>
+        <mat-divider></mat-divider>
+        <!--mat-card-actions>
+            <mat-chip-list>
+                <mat-chip>
+
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-actions-->
     </mat-card>
 </article>
-<!--/div-->
+</div>
+
+<!--loading-->
+<ng-template #loading>
+    <div class="container-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>
 
 <!--*ngFor="let post of posts" en post-card-->

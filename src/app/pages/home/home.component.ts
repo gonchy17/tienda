@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 
 
 import { Component, OnInit } from '@angular/core';
@@ -10,38 +11,15 @@ import { DishService } from './dish/dish.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit { 
 
-  public dish:{
-    id:string;
-    titleDish:string;
-    contentDish:string;
-    imageDish:string;
-  }
-  /*public dish:{
-    id:string;
-    titleDish:string;
-    contentDish:string;
-    imageDish:string;
-  }[]=[
-    {
-      id:'1',
-      titleDish:'Pique',
-      contentDish:`lorem ipsum`,
-      imageDish:'https://img-global.cpcdn.com/recipes/caef4bfd1a0dbdcd/751x532cq70/pique-macho-cochabambino-foto-principal.webp'
-    },
-    {
-      id:'2',
-      titleDish:'Planchita',
-      contentDish:`lorem ipsum`,
-      imageDish:'https://img-global.cpcdn.com/recipes/caef4bfd1a0dbdcd/751x532cq70/pique-macho-cochabambino-foto-principal.webp'
-    }
-  ];
-  */
+  public dish$: Observable<DishI[]>;
+  
   constructor(private dishSvc: DishService) { }
 
   ngOnInit() {
-    this.dishSvc.getAllDish().subscribe(res=> console.log('DISH', res));
+    //this.dishSvc.getAllDish().subscribe(res=> console.log('DISH', res));
+    this.dish$ = this.dishSvc.getAllDish();
   }
 
 }
@@ -54,6 +32,10 @@ debe programar, tambien se debe investigar
 * Se resolvera para lo ultimo el diseño mobile, tablet y des ser necesario pc, por
 ahora concentrarse en la logica
 * ahora probar e investigar el error del id que esta comentado en el service c-22-02-21
-Por ahora no se puede hacer correr, si no se pudiera nuevamente, entonces ver el video de dominicode
-c-24-02-21
+
+* investigar como importar un repositorio de github en codesanbox c-24-02-21
+* estilos para el final c-28-02-21
+* crear la rama firebase en github y agregar hasta aqui,hacer que funcione firebase puesto que se cayo
+la señal c-28-02-21
+*ya se creo la rama faltante c-06-03-21
 */ 
